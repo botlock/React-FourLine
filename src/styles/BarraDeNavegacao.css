@@ -1,0 +1,12 @@
+.img-logo{
+    width: 7em;
+    height: 7em;
+
+}
+@media (max-width: 600px) {
+    /* regras CSS a serem aplicadas em dispositivos com largura de tela menor que 600 pixels */
+    .img-logo{
+        width: 5em;
+        height: 5em;
+    }
+  }
