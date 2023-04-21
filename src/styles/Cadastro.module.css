@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.fotoLogin{
+    width: 50%;
+    height: 50%;
+}
+
+.div-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 10px;
+
+}
+.Container{
+  
+   color: white;
+   background-color: #121214 ;
+}
+.primeiraSection{
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+
+}
+.Titulo{
+    padding: 1em;
+    background-color: black;
+    text-align: center;
+    font-size: large;
+    margin-bottom: 10em;
+}

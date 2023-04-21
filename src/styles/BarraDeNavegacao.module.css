@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.BarradeNavegacao{
+    padding: 0em;
+    margin: 0em 0em 5em 0em;
+}
+.imgLogo{
+    width: 100px;
+    height: 100px;
+}
+
+.divFotoTitulo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+}
+@media (max-width: 600px) {
+    /* regras CSS a serem aplicadas em dispositivos com largura de tela menor que 600 pixels */
+    .img-logo{
+        width: 5em;
+        height: 5em;
+    }
+  }

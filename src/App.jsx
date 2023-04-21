@@ -1,14 +1,18 @@
-{/*import ResponsiveAppBar from "./components/BarraDeNavegacao"*/}
-import Login from "./components/Login"
-import './App.css'
+import { BrowserRouter, Routes , Route } from "react-router-dom"
+import Home from "./pages/Home"
 
-function App() {
+import Page404 from "./pages/404"
+import Cadastro from "./pages/Cadastro"
+
+export default function App() {
   return (
-    <div style={{ backgroundColor: 'black' }}>
-      {/*<ResponsiveAppBar />*/}
-      <Login/>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/cadastro" element={<Cadastro/>}/>
+        <Route path="*" element={<Page404/>}/>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
-export default App

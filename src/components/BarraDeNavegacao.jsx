@@ -13,10 +13,13 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import "../styles/BarraDeNavegacao.css"
+import styles from "../styles/BarraDeNavegacao.module.css"
 
-const pages = ['Home', 'Pesquisa', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+
+
+
+const pages = ["Home", "Pesquisar", "Criar"];
+const settings = ['Perfil', 'Dashboard', 'Sair'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -38,7 +41,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static" style={{ backgroundColor: 'black' }}>
+    <AppBar position="static" style={{ backgroundColor: 'black' }} className="BarradeNavegacao">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
          {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> -- logo do android*/}
@@ -58,7 +61,11 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-           <img src = {logo} alt="Logo" className='img-logo' sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}   />
+            <div className={styles.divFotoTitulo}>
+               <img src = {logo} alt="Logo" className={styles.imgLogo} sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}   />
+             FourLine
+            </div>
+          
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -91,7 +98,7 @@ function ResponsiveAppBar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem key={page} onClick={handleCloseNavMenu} href={`/${page}`}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
@@ -121,6 +128,7 @@ function ResponsiveAppBar() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
+           
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
@@ -153,9 +161,10 @@ function ResponsiveAppBar() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
+                 {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
                   <Typography textAlign="center">{setting}</Typography>
+             
                 </MenuItem>
               ))}
             </Menu>
