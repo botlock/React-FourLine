@@ -1,39 +1,18 @@
-*{
-    margin: 0px;
-    padding: 0px;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Inter", sans-serif;
 }
 
-.fotoLogin{
-    width: 50%;
-    height: 50%;
+body {
+  background-color: #121214;
 }
 
-.div-menu{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container {
+  display: flex;
+  justify-content: space-evenly;
+}
 
-    margin-right: 10px;
-
-}
-.Container{
-  
-   color: white;
-   background-color: #121214 ;
-}
-.primeiraSection{
-    margin: 1em;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
-
-}
-.Titulo{
-    padding: 1em;
-    background-color: black;
-    text-align: center;
-    font-size: large;
-    margin-bottom: 10em;
-}
+/* color: #ad49dc; */
