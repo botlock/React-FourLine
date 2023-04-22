@@ -1,4 +1,7 @@
 import styles from "../styles/Register.module.css";
+import AccessAlarmIcon from '@mui/icons-material/AccessAlarm';
+import ThreeDRotation from '@mui/icons-material/ThreeDRotation';
+
 
 export const Register = () => {
   return (
@@ -18,7 +21,7 @@ export const Register = () => {
           name="email"
           id="email"
           autoComplete="off"
-          placeholder="Exemplo: rogeriofarias@gmail.com"
+          placeholder={AccessAlarmIcon}
         />
 
         <input
@@ -26,7 +29,7 @@ export const Register = () => {
           name="password"
           id="password"
           autoComplete="off"
-          placeholder="Sua melhor senha:"
+          placeholder=""
         />
 
         <input
@@ -34,7 +37,7 @@ export const Register = () => {
           name="age"
           id="age"
           autoComplete="off"
-          placeholder="Exemplo: 16"
+          placeholder=""
         />
 
         <input
@@ -42,7 +45,7 @@ export const Register = () => {
           name="phone"
           id="phone"
           autoComplete="off"
-          placeholder="Exemplo: (99) 00000-0000"
+          placeholder=""
         />
         <button className={styles.btn_form}>Cadastrar</button>
       </form>

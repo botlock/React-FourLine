@@ -5,16 +5,18 @@ import { Register } from "../components/Register";
 
 export default function Cadastro() {
   return (
-    <main className={styles.container}>
-      <section className={styles.image_register_section}>
-        <img src={fotoLogin} alt="" />
-        <h2>
-          Cadastre-se agora na{" "}
-          <span className={styles.purple_span}>FourLine</span>
-        </h2>
-      </section>
-      <section className={styles.form_section}>
-        <Register />
+    <main>
+      <section>
+        <article>
+           <h1>Faça sua conta agora !</h1>
+
+           <p>Vem fazer parte da nova rede social você também</p> 
+           
+          <img src={fotoLogin} alt="Foto Login" className={styles.imgLogin}/>
+        </article> 
+        <article>
+          <Register/>
+        </article>
       </section>
     </main>
   );
